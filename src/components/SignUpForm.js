@@ -181,9 +181,9 @@ const SignUpForm = () => {
                     />
                     {errors.city && <span>{errors.city}</span>}
                 </div>
-               
+             
                 <button className="signup-button" type="submit">Sign Up</button>
-               
+                
             </form>
 
         </div>
