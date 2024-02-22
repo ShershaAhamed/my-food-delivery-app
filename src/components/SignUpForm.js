@@ -25,7 +25,7 @@ const SignUpForm = () => {
             [name]: value
         });
     };
-    const url = "https://my-food-delivery-be.vercel.app/signup"
+    const url = "https://backend-gamma-woad.vercel.app/signup"
     const handleSubmit = async (e) => {
         e.preventDefault()
         if (validateForm()) {
