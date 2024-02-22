@@ -58,38 +58,36 @@ const SignUpForm = () => {
         let errors = {};
         let isValid = true;
 
-        // Name validation
         if (!formData.name.trim()) {
             errors.name = 'Name is required';
             isValid = false;
         }
 
-        // Mobile number validation
         if (!formData.mobileNumber.match(/^\d{10}$/)) {
             errors.mobileNumber = 'Mobile number must be 10 digits';
             isValid = false;
         }
-        // Email
+
         if (!formData.email.match(/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/)) {
             errors.email = 'Invalid email address';
             isValid = false;
         }
-        // Password 
+   
         if (formData.password.length < 6) {
             errors.password = 'Password must be at least 6 characters long';
             isValid = false;
         }
-        // Address
+     
         if (!formData.address.trim()) {
             errors.address = 'Address is required';
             isValid = false;
         }
-        // Pincode
+      
         if (!formData.pincode.match(/^\d{6}$/)) {
             errors.pincode = 'Pincode must be 6 digits';
             isValid = false;
         }
-        // City
+        
         if (!formData.city.trim()) {
             errors.city = 'City is required';
             isValid = false;
