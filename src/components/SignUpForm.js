@@ -44,8 +44,13 @@ const SignUpForm = () => {
 
             } catch (error) {
                 console.log(error)
+                toast.error("An error occurred");
             }
+        } else {
+            toast.error("Please fill in all required fields correctly");
         }
+            
+        
     };
 
     const validateForm = () => {
