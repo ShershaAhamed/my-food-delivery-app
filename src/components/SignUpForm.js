@@ -40,11 +40,11 @@ const SignUpForm = () => {
                     body: JSON.stringify(formData)
                 });
                 toast.success("User created successfully");
-                setFormData(initialState);
+                // setFormData(initialState);
                 return await response.json();
             } catch (error) {
                 console.log(error);
-                toast.error("Success");
+                
             }
         } else {
             toast.error("Please fill in all required fields correctly");
