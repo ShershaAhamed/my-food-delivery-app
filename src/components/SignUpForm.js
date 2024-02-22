@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
-import 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const SignUpForm = () => {
     const initialState =
@@ -26,7 +26,7 @@ const SignUpForm = () => {
             [name]: value
         });
     };
-    const url = "http://localhost:4000/signup"
+    const url = "https://my-food-delivery-be.vercel.app/signup"
     const handleSubmit = async (e) => {
 
         e.preventDefault()
