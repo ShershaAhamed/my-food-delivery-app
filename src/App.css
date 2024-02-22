@@ -49,3 +49,19 @@ body {
   outline: none;
   border-color: #ff758c;
 }
+
+/* CSS */
+.signup-button {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff758c;
+  /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  font-size: 16px;
+  border-radius: 8px;
+}

@@ -26,6 +26,7 @@ const SignUpForm = () => {
         });
     };
     const url = "https://my-food-delivery-be.vercel.app/signup"
+
     const handleSubmit = async (e) => {
         e.preventDefault()
         if (validateForm()) {
@@ -180,7 +181,9 @@ const SignUpForm = () => {
                     />
                     {errors.city && <span>{errors.city}</span>}
                 </div>
-                <button type="submit">Sign Up</button>
+               
+                <button className="signup-button" type="submit">Sign Up</button>
+               
             </form>
 
         </div>
