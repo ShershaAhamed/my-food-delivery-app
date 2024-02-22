@@ -33,10 +33,11 @@ const SignUpForm = () => {
             try {
                 const response = await fetch(url, {
                     method: 'POST',
+                    body: JSON.stringify(formData),
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify(formData)
+                 
                 });
                 toast.success("user create successfully")
                 // setFormData(initialState)
