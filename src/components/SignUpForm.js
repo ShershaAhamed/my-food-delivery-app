@@ -28,26 +28,29 @@ const SignUpForm = () => {
     };
     const url = "https://my-food-delivery-be.vercel.app/signup"
     const handleSubmit = async (e) => {
-
-        e.preventDefault()
-        try {
-            const response = await fetch(url, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(formData)
-            });
-            toast.success("user create successfully")
-            // setFormData(initialState)
-            return await response.json();
-
-        } catch (error) {
-            console.log(error)
+        e.preventDefault();
+    
+        if (validateForm()) {
+            try {
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+                toast.success("User created successfully");
+                setFormData(initialState);
+                return await response.json();
+            } catch (error) {
+                console.log(error);
+                toast.error("Success");
+            }
+        } else {
+            toast.error("Please fill in all required fields correctly");
         }
-
     };
-
+    
     const validateForm = () => {
         let errors = {};
         let isValid = true;
