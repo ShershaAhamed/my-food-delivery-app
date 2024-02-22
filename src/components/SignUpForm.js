@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -15,8 +16,6 @@ const SignUpForm = () => {
     }
 
     const [formData, setFormData] = useState(initialState);
-
-
     const [errors, setErrors] = useState({});
 
     const handleChange = (e) => {
@@ -26,11 +25,11 @@ const SignUpForm = () => {
             [name]: value
         });
     };
-    const url = "https://my-food-delivery-be.vercel.app/signup"
+    const url = "https://vercel.com/shersha123/my-food-delivery-be/signup"
     const handleSubmit = async (e) => {
-        e.preventDefault();
-    
+        e.preventDefault()
         if (validateForm()) {
+
             try {
                 const response = await fetch(url, {
                     method: 'POST',
@@ -39,18 +38,16 @@ const SignUpForm = () => {
                     },
                     body: JSON.stringify(formData)
                 });
-                toast.success("User created successfully");
-                // setFormData(initialState);
+                toast.success("user create successfully")
+                // setFormData(initialState)
                 return await response.json();
+
             } catch (error) {
-                console.log(error);
-                
+                console.log(error)
             }
-        } else {
-            toast.error("Please fill in all required fields correctly");
         }
     };
-    
+
     const validateForm = () => {
         let errors = {};
         let isValid = true;
